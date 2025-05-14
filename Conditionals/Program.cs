@@ -32,6 +32,7 @@ namespace Conditionals
 
             // Switch statement
             Console.WriteLine("--------------SWITCH-----------------");
+            // Example: Switch statement to determine the day of the week
             var day = 3;
             switch (day)
             {
@@ -59,8 +60,32 @@ namespace Conditionals
                 default:
                     Console.WriteLine("Invalid day");
                     break;
-                }
-                Console.ReadLine();
+            }
+
+            Console.WriteLine("--------------EXAMPLE-----------------");
+            // Example: Check if a number is in a specific range
+
+            if (number >= 0 && number < 100)
+            {
+                Console.WriteLine("Number is between 0 and 100");
+            }
+            else if (number >= 100 && number < 200)
+            {
+                Console.WriteLine("Number is between 100 and 200");
+            }
+            else if (number >= 200 && number < 300)
+            {
+                Console.WriteLine("Number is between 200 and 300");
+            }
+            else if (number >= 300 || number < 400)
+            {
+                Console.WriteLine("Number is between 300 and 400");
+            }
+            else
+            {
+                Console.WriteLine("Number is greater than or equal to 400");
+            }
+            Console.ReadLine();
         }
     }
 }
