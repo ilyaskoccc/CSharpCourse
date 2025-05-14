@@ -24,6 +24,11 @@ namespace Conditionals
             {
                 Console.WriteLine("Number is zero");
             }
+
+            Console.WriteLine("--------------TERNARY-----------------");
+
+            // Ternary operator
+            Console.WriteLine(number == 0 ? "Number is zero" : number > 0 ? "Number is positive" : "Number is negative");
        
             Console.ReadLine();
         }
