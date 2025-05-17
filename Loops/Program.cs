@@ -10,13 +10,32 @@ namespace Loops
     {
         static void Main(string[] args)
         {
+            ForLoop();
+            WhileLoop();
+            DoWhileLoop();
+            ForEachLoop();
+
+            Console.WriteLine("Number Is Prime : " + IsPrimeNumber(7));
+            Console.WriteLine("Number Is Prime : " + IsPrimeNumber(10));
+
+            Console.ReadLine();
+        }
+
+        public static void ForLoop()
+        {
             // For Loop
+            Console.WriteLine("----------NEW-LINE------------");
             for (int i = 10; i >= 0; i = i - 2)
             {
                 Console.WriteLine("For Loop: " + i);
             }
             Console.WriteLine("----------NEW-LINE------------");
+            Console.WriteLine();
+        }
+        public static void WhileLoop()
+        {
             // While Loop
+            Console.WriteLine("----------NEW-LINE------------");
             int j = 1;
             while (j <= 10)
             {
@@ -24,22 +43,41 @@ namespace Loops
                 j = j + 2;
             }
             Console.WriteLine("----------NEW-LINE------------");
+            Console.WriteLine();
+        }
+        public static void DoWhileLoop()
+        {
             // Do While Loop
+            Console.WriteLine("----------NEW-LINE------------");
             int k = 0;
             do
             {
                 Console.WriteLine("Do While Loop: " + k);
                 k++;
             } while (k <= 10);
-
             Console.WriteLine("----------NEW-LINE------------");
-            // Foreach Loop
-            string[] names = new string[5] { "İlyas", "Volkan", "Ahmet", "Ali", "Veli" };
+            Console.WriteLine();
+        }
+        public static void ForEachLoop()
+        {
+            // For Each Loop
+            Console.WriteLine("----------NEW-LINE------------");
+            List<string> names = new List<string>() { "John", "Jane", "Doe" };
             foreach (string name in names)
             {
-                Console.WriteLine("Foreach Loop: " + name);
+                Console.WriteLine("For Each Loop: " + name);
             }
-            Console.ReadLine();
+            Console.WriteLine("----------NEW-LINE------------");
+            Console.WriteLine();
+        }
+        public static bool IsPrimeNumber(int number)
+        {
+            if (number <= 1) return false;
+            for (int i = 2; i <= Math.Sqrt(number); i++)
+            {
+                if (number % i == 0) return false;
+            }
+            return true;
         }
     }
 }
