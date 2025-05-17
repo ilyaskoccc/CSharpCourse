@@ -30,7 +30,15 @@ namespace Loops
             {
                 Console.WriteLine("Do While Loop: " + k);
                 k++;
-            } while (k < 10);
+            } while (k <= 10);
+
+            Console.WriteLine("----------NEW-LINE------------");
+            // Foreach Loop
+            string[] names = new string[5] { "İlyas", "Volkan", "Ahmet", "Ali", "Veli" };
+            foreach (string name in names)
+            {
+                Console.WriteLine("Foreach Loop: " + name);
+            }
             Console.ReadLine();
         }
     }
