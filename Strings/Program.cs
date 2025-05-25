@@ -119,7 +119,6 @@ namespace Strings
             Console.WriteLine("Padded Right String: " + padRightStr);
 
             Console.ReadLine();
-            Console.WriteLine("Press any key to exit...");
         }
     }
 }
