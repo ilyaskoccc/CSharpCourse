@@ -64,6 +64,17 @@ namespace VirtualMethods
 
         class OracleDatabase : Database
         {
+            public override void Connect()
+            {
+                // Using base class implementation
+                base.Connect();
+            }
+
+            public override void Disconnect()
+            {
+                // Using base class implementation
+                base.Disconnect();
+            }
         }
     }
 }
