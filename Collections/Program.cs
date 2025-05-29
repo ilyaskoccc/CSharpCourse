@@ -29,7 +29,7 @@ namespace Collections
 
             customers.Reverse();
 
-            customers.Clear();
+            //customers.Clear();
 
             foreach (var customer in customers)
             {
@@ -43,6 +43,24 @@ namespace Collections
             foreach (var item in arrayList)
             {
                 Console.WriteLine($"ArrayList Item: {item}");
+            }
+
+            Console.WriteLine(arrayList.Contains(42));
+
+            Dictionary<int, string> dictionary = new Dictionary<int, string>
+            {
+                { 1, "One" },
+                { 2, "Two" },
+                { 3, "Three" }
+            };
+
+            dictionary.Add(4, "Four");
+            dictionary.Remove(2);
+            dictionary[3] = "Updated Three";
+            
+            foreach (var kvp in dictionary)
+            {
+                Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
             }
 
             Console.ReadLine();
