@@ -70,6 +70,18 @@ namespace AdoNetDemo
             _connection.Close();
         }
 
+        public void Update(Product product)
+        {
+            ConenctionControl();
+            SqlCommand command = new SqlCommand("UPDATE Products SET Name = @name, UnitPrice = @unitPrice, StockAmount = @stockAmount WHERE Id = @id", _connection);
+            command.Parameters.AddWithValue("@id", product.Id);
+            command.Parameters.AddWithValue("@name", product.Name);
+            command.Parameters.AddWithValue("@unitPrice", product.UnitPrice);
+            command.Parameters.AddWithValue("@stockAmount", product.StockAmount);
+            command.ExecuteNonQuery();
+            _connection.Close();
+        }
+
         public void ConenctionControl()
         {
             if (_connection.State == ConnectionState.Closed)
