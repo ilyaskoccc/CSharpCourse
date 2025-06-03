@@ -28,6 +28,11 @@ namespace EntityFreamworkDemo
             dgwProducts.DataSource = _productDao.GetAll();
         }
 
+        public void SearchProducts(string key)
+        {
+            dgwProducts.DataSource = _productDao.GetAll().Where(product => product.Name.Contains(key)).ToList();
+        }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
             _productDao.Add(new Product
@@ -77,6 +82,20 @@ namespace EntityFreamworkDemo
             tbxUnitPriceUpdate.Clear();
             tbxStockAmountUpdate.Clear();
             LoadProducts();
+        }
+
+        private void tbxSearch_TextChanged(object sender, EventArgs e)
+        {
+            tbxSearch.Text = tbxSearch.Text.Trim();
+            if (string.IsNullOrEmpty(tbxSearch.Text))
+            {
+                LoadProducts();
+                dgwProducts.Focus();
+            }
+            else
+            {
+                SearchProducts(tbxSearch.Text);
+            }
         }
     }
 }
