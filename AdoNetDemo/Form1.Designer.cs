@@ -38,6 +38,7 @@
             this.lblUnitPrice = new System.Windows.Forms.Label();
             this.lblStockAmount = new System.Windows.Forms.Label();
             this.gbxUpdate = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tbxStockAmountUpdate = new System.Windows.Forms.TextBox();
             this.tbxUnitPriceUpdate = new System.Windows.Forms.TextBox();
@@ -139,6 +140,7 @@
             // 
             // gbxUpdate
             // 
+            this.gbxUpdate.Controls.Add(this.btnDelete);
             this.gbxUpdate.Controls.Add(this.btnUpdate);
             this.gbxUpdate.Controls.Add(this.tbxStockAmountUpdate);
             this.gbxUpdate.Controls.Add(this.tbxUnitPriceUpdate);
@@ -153,6 +155,16 @@
             this.gbxUpdate.TabIndex = 9;
             this.gbxUpdate.TabStop = false;
             this.gbxUpdate.Text = "Update a product";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(21, 144);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(100, 23);
+            this.btnDelete.TabIndex = 9;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
@@ -251,6 +263,7 @@
         private System.Windows.Forms.TextBox tbxNameUpdate;
         private System.Windows.Forms.Label lblUnitPriceUpdate;
         private System.Windows.Forms.Label lblStockAmountUpdate;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
 
