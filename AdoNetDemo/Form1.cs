@@ -64,7 +64,8 @@ namespace AdoNetDemo
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            _productDao.Delete(Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value));
+            int Id = Convert.ToInt32(dgwProducts.CurrentRow.Cells[0].Value);
+            _productDao.Delete(Id);
             MessageBox.Show("Product deleted successfully!");
             LoadProducts();
         }
