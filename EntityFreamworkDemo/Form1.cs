@@ -30,7 +30,8 @@ namespace EntityFreamworkDemo
 
         public void SearchProducts(string key)
         {
-            dgwProducts.DataSource = _productDao.GetAll().Where(product => product.Name.Contains(key)).ToList();
+            //dgwProducts.DataSource = _productDao.GetAll().Where(product => product.Name.ToLower().Contains(key.ToLower())).ToList();
+            dgwProducts.DataSource = _productDao.GetByName(key);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
