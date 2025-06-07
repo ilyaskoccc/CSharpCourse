@@ -31,7 +31,9 @@ namespace Reflection
             Console.WriteLine("-------------------------------------------");
 
             var methods = type.GetMethods();
+            Console.WriteLine();
             Console.WriteLine("DortIslem Sınıfındaki Metotlar:");
+            Console.WriteLine("-------------------------------------------");
 
             foreach (var method in methods)
             {
